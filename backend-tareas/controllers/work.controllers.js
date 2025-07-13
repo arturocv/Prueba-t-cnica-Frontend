@@ -3,10 +3,7 @@ const WorkModel = require('../models/WorkModel');
 
 const showWorks = async (req, res = response) => {
     const works = await WorkModel.find();
-    res.json({
-        ok:true,
-        works
-    });
+    res.json(works);
 }
 
 const createWorks = async(req, res = response) => {
